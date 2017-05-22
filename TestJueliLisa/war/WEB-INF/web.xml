@@ -15,4 +15,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+		<servlet>
+		<servlet-name>LisasServlet</servlet-name>
+		<servlet-class>htwg.test.LisasServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LisasServlet</servlet-name>
+		<url-pattern>/lisasservlet</url-pattern>
+	</servlet-mapping>
 </web-app>
