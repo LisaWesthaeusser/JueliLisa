@@ -1,0 +1,371 @@
+@CHARSET "UTF-8";
+
+
+/*Body Style*/
+body{
+	position: absolute;
+	margin-left: 130px;
+	margin-top: 10px;
+	margin-right:50px;
+	padding-bottom:20px;
+	background-color: white;
+
+	
+		
+}
+/*Logo GIB-Anamnese*/
+#Logo{ 
+	width: 350px;
+	position:absolute;
+	top:10px;
+		
+}
+
+/*Schriftfarbe und style*/
+p, td, h1, h2, label,a {
+	color:#424242;
+	font-family: sans-serif;
+}
+
+
+
+b{
+	font-size:40px;
+	font-style:normal;
+	left:20px;
+	background-color:white;
+	
+
+}
+
+/*Befehl form Style*/
+form{
+	margin-top:15px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+/*Anmelden etc. Style*/
+.anmelden{
+	float: left;
+	text-align: left;
+	width: 5em;
+	color: #1990b7;
+}
+/*Fragen sollen nicht aufgelistet angezeigt werden*/
+li{
+	list-style:none;
+}
+
+/*Anmelden etc. Style*/
+#anmelden{
+
+	float: right;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #1990b7;
+	border-radius: 5px 5px;
+	
+}
+/*Anmelden auf Arztsicht*/
+#anmeldenA{
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: #1990b7;
+	border-radius: 7px 7px;
+	margin-right:10px;
+	color: #424242;
+	font-size: 25px;
+	font-style: normal;
+	font-family: sans-serif;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+#AnmeldenA{
+	width: 200px;
+	height: 22px;
+	font-size: 18px;
+}
+button{
+	background-color: #1990b7;
+	color: white;
+	border-radius: 5px 5px;
+	float: right;
+	margin-right :5px;
+	border-radius: 5px 5px;
+	border-style: groove;
+	border-width: 2px;
+	border-color: #1990b7;
+	
+}
+/*zurück button*/
+#zurück{
+	float: left;
+	width: 100px;
+	height:30px;
+	font-family: sans-serif;
+	font-size:15px;
+	margin-top:25px;
+}
+
+/*zurück unten button*/
+#zurückUnten{
+	float: left;
+	width: 100px;
+	height:30px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+/*senden button*/
+#senden{
+	float: right;
+	width: 100px;
+	height:50px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+#zurück:hover, #zurückUnten:hover, #senden:hover{
+	background-color: #59aabe;
+}
+#zurück:active , #zurückUnten:active, #senden:active{
+	background-color: red;
+	border-color:red;
+}
+/*Registrieren und anmelden Style*/
+#Regi,#vergessen{
+	color:scrollbar;
+	font-size:12px;
+	margin-left: 3px;
+	
+}
+/*hintergrund*/
+.tabcontent{
+	position:relative;
+	width:1196px;
+	padding:auto 100px;
+	background-color:white;
+	border-width:2px;
+	border-color:#1990b7;
+	border-bottom-right-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	border-style: solid;
+	text-align: center;
+	
+	
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #1990b7;
+    position:realtive;
+	margin-top:150px;
+	border-top-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	width: 1200px;
+	
+}
+
+/* Style Buttons im Reiter */
+.tab button {
+    background-color: #1990b7;
+    color:white;
+    font-size:22px;
+    float: left;
+  	border:none;
+  	
+    padding: 10px 97px;
+    transition: 0.3s;
+    border-radius:3px;
+   	
+    
+}
+
+/*Bogen Hintergrund etc.*/  
+.bogen{
+	padding-left:10px;
+	position:relative;
+	width:1186px;
+	padding:auto 100px;
+	background-color:white;
+	border-width:2px;
+	border-color:#1990b7;
+	border-bottom-right-radius: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	border-style: solid;
+	text-align: left;
+
+}
+
+
+/* CSS Fragen */
+.frage{
+	font-size: 22px;
+	font-style: normal;
+	font-family: sans-serif;
+	color: #424242;
+	border-width:1.5px;
+	border-color:#1990b7;
+	border-style: solid;
+	border-bottom-style:none;
+	margin-right:10px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	padding-left: 10px;
+	padding-top: 5px;
+
+	
+}
+/* Css Antworten auf die Fragen */
+.antwort{
+	font-size: 18px;
+	font-style: normal;
+	font-family: sans-serif;
+	border-width:1.5px;
+	border-color:#1990b7;
+	border-style: solid;
+	border-top-style:none;
+	color:#424242;
+	border-bottom-left-radius:7px;
+	border-bottom-right-radius:7px;
+	padding-left: 13px;
+	padding-top: 5px;
+	padding-bottom:5px;
+	margin-right:10px;
+	
+	
+	
+}
+
+/* Ja Nein Button abstand */
+.antworten{
+	padding-right:300px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #dd141e;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+/*Tabelle*/
+table{
+	color: #424242;
+	border-collapse: collapse;
+	border-style: none;
+	
+}
+
+/*Auswahl schlecht,gleichbleibend,gut */
+.behandlungAuswahl{
+
+	float: right;
+	margin-right: 600px;
+	margin-bottom: 20px;
+
+}
+#Logo2{
+	width: 400px;
+	height: 250px;
+	border-style: solid;
+	border-color: #1990b7;
+	border-width: 3px;
+	border-radius:4px;
+	
+
+}
+/*Textfelder Schriftgöße etc.*/
+#Textfeld{
+	width: 310px;
+	height: 20px;
+	font-size: 15px;
+}
+
+textarea{
+	font-size: 15px;
+	
+}
+/*quelle im Impressum*/
+.quelle{
+	font-size: xx-small;
+}
+
+.unterschrift{
+	font-family: sans-serif;
+	font-size: medium;
+}
+
+.Medikament, .Art, .Dosierung, .Zeitraum, .Wann , .Wo, .Körperteil{
+	border-style: none;
+	height: 25px;
+	width: 260px;
+}
+
+
+
+#anamneseliste{
+	font-size: 22px;
+	font-style: normal;
+	font-family: sans-serif;
+	color: #424242;
+	border-width:1.5px;
+	border-color:#1990b7;
+	border-style: solid;
+	border-bottom-style:none;
+	margin-right:10px;
+	border-top-left-radius:7px;
+	border-top-right-radius:7px;
+	padding-left: 10px;
+	padding-top: 5px;	
+}
+
+#herunterladen{
+	float: left;
+	width: 110px;
+	height:60px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+#löschen{
+	float: left;
+	width: 110px;
+	height:60px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+#markieren{
+	float: left;
+	width: 110px;
+	height:60px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+#markierterunterladen{
+	float: left;
+	width: 110px;
+	height:60px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+#hochladen{
+	float: left;
+	width: 100px;
+	height:30px;
+	font-family: sans-serif;
+	font-size:15px;
+}
+
+
+/*skalierung*/
+[CSS]
+.container {
+width: 920px;
+margin: 50px auto;
+padding: 0 42px;
+background-repeat: no-repeat;
+background-position: center 0px;
+}
+[/CSS]
