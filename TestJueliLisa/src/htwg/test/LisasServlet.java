@@ -5,9 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import daodi.Patient;
 
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
