@@ -23,4 +23,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>LisasServlet</servlet-name>
 		<url-pattern>/lisasservlet</url-pattern>
 	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>JuelideServlet</servlet-name>
+		<servlet-class>htwg.test.JuelideServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JuelideServlet</servlet-name>
+		<url-pattern>/JuelideServlet</url-pattern>
+	</servlet-mapping>
 </web-app>
