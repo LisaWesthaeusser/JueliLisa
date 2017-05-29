@@ -23,7 +23,7 @@ public class LisasServlet extends HttpServlet {
 		try {
 			con = DriverManager.getConnection("jdbc:sqlite:Datenbank.db");
 			st = con.createStatement();
-			result = st.executeQuery("SELECT * FROM BoBogen WHERE BoId = " + id);
+			result = st.executeQuery("SELECT * FROM BoBogen WHERE BoID = " + id);
 
 			if (result.next()) {
 				bogen = SQLSelect(id, result);
@@ -37,22 +37,23 @@ public class LisasServlet extends HttpServlet {
 
 	private Bogen SQLSelect(String id, ResultSet result) throws SQLException {
 
+		Bogen bogen = new Bogen();
 		bogen.setFrage1(result.getString("BoFrage1"));
-		bogen.setId(result.getInt("BoId"));
+		bogen.setId(result.getInt("BoID"));
 		return bogen;
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String bogenId = req.getParameter("ID");
-		Bogen bogen = readBogen(bogenId);
+		bogen = readBogen(bogenId);
 
 		resp.setContentType("text/html");
 		PrintWriter writer = resp.getWriter();
 		String htmlResponse = "<html>";
 		htmlResponse += "<head>";
 		htmlResponse += "<body>";
-	    htmlResponse +=  "<h2>Ihr Name lautet: " + bogen.getFrage1() + "</h2>";
+	    htmlResponse +=  "<h2>Ihr Name lautet: " + bogen.getFrage1() + " </h2>";
 		htmlResponse += "</body>";
 		htmlResponse += "</html>";		
 		writer.println(htmlResponse);
