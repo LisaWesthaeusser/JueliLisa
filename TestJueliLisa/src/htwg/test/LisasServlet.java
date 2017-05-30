@@ -24,7 +24,7 @@ public class LisasServlet extends HttpServlet {
 		String htmlResponse = "<html>";
 		htmlResponse += "<head>";
 		htmlResponse += "<body>";
-	    htmlResponse +=  "<h2>Ihr Name lautet: " + bogen.getFrage1() + "</h2>";
+	    htmlResponse +=  "<h2>Ihr Name lautet : " + bogen.getFrage1() + "</h2>";
 		htmlResponse += "</body>";
 		htmlResponse += "</html>";		
 		writer.println(htmlResponse);
