@@ -12,41 +12,12 @@ import java.sql.*;
 @SuppressWarnings("serial")
 public class LisasServlet extends HttpServlet {
 
-	ResultSet result = null;
-	Statement st = null;
-	Connection con = null;
-	String kette = null;
-	Bogen bogen = null;
-
-	public Bogen readBogen(String id) {
-
-		try {
-			con = DriverManager.getConnection("jdbc:sqlite:Datenbank.db");
-			st = con.createStatement();
-			result = st.executeQuery("SELECT * FROM BoBogen WHERE BoID = " + id);
-
-			if (result.next()) {
-				bogen = SQLSelect(id, result);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return bogen;
-	}
-
-	private Bogen SQLSelect(String id, ResultSet result) throws SQLException {
-
-		Bogen bogen = new Bogen();
-		bogen.setFrage1(result.getString("BoFrage1"));
-		bogen.setId(result.getInt("BoID"));
-		return bogen;
-	}
-
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String bogenId = req.getParameter("ID");
-		bogen = readBogen(bogenId);
+		
+		DatenbankAnbindung dba = new DatenbankAnbindung();
+		Bogen bogen = dba.readBogen(bogenId);
 
 		resp.setContentType("text/html");
 		PrintWriter writer = resp.getWriter();
