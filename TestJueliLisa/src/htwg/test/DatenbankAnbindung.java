@@ -12,7 +12,7 @@ public class DatenbankAnbindung {
 	Statement st = null;
 	Connection con = null;
 	String kette = null;
-	Bogen bogen = null;
+	Bogen bogen;
 
 	public Bogen readBogen(String id) {
 
@@ -33,7 +33,7 @@ public class DatenbankAnbindung {
 
 	private Bogen SQLSelect(String id, ResultSet result) throws SQLException {
 
-		Bogen bogen = new Bogen();
+		
 		bogen.setFrage1(result.getString("BoFrage1"));
 		bogen.setId(result.getInt("BoID"));
 		return bogen;
