@@ -12,10 +12,11 @@ public class DatenbankAnbindung {
 	Statement st = null;
 	Connection con = null;
 	String kette = null;
-	Bogen bogen;
+	Bogen bogen = null;
 
+	
 	public Bogen readBogen(String id) {
-
+		bogen = new Bogen();
 		try {
 			con = DriverManager.getConnection("jdbc:sqlite:war/WEB-INF/Datenbank.db");
 			st = con.createStatement();
@@ -33,16 +34,17 @@ public class DatenbankAnbindung {
 
 	private Bogen SQLSelect(String id, ResultSet result) throws SQLException {
 
-		
-		bogen.setFrage1(result.getString("BoFrage1"));
-		bogen.setId(result.getInt("BoID"));
-		return bogen;
+		Bogen bog =  new Bogen();
+		bog.setFrage1(result.getString("BoFrage1"));
+		bog.setId(result.getInt("BoID"));
+		return bog;
 	}
 	
-	public static void main(String[] args) {
-		DatenbankAnbindung dba = new DatenbankAnbindung();
-		Bogen bogen = dba.readBogen("1");
-		System.out.println(bogen.getFrage1());
-		
-	}
+//	public static void main(String[] args) {
+//		Bogen bogen = new Bogen();
+//		DatenbankAnbindung dba = new DatenbankAnbindung(bogen);
+//		bogen = dba.readBogen("1");
+//		System.out.println(bogen.getFrage1());
+//		
+//	}
 }
