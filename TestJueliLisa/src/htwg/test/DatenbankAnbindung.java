@@ -12,13 +12,11 @@ public class DatenbankAnbindung {
 	Statement st = null;
 	Connection con = null;
 	String kette = null;
-	Bogen bogen = null;
-
-	
+		
 	public Bogen readBogen(String id) {
-		bogen = new Bogen();
+		Bogen bogen = new Bogen();
 		try {
-			con = DriverManager.getConnection("jdbc:sqlite:war/WEB-INF/Datenbank.db");
+			con = DriverManager.getConnection("jdbc:sqlite:WEB-INF/Datenbank.db");
 			st = con.createStatement();
 			result = st.executeQuery("SELECT * FROM BoBogen WHERE BoID = " + id);
 

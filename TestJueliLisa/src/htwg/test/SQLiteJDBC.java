@@ -7,7 +7,7 @@ public class SQLiteJDBC {
 		Connection c = null;
 		try {
 			Class.forName("");
-			c = DriverManager.getConnection("jdbc:sqlite:war/WEB-INF/Datenbank.db");
+			c = DriverManager.getConnection("jdbc:sqlite:WEB-INF/Datenbank.db");
 		} catch (Exception e) {
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 			System.exit(0);
