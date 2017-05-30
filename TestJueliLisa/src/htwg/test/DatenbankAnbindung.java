@@ -15,6 +15,8 @@ public class DatenbankAnbindung {
 		
 	public Bogen readBogen(String id) {
 		Bogen bogen = new Bogen();
+		bogen.setId(id);
+		
 		try {
 			con = DriverManager.getConnection("jdbc:sqlite:WEB-INF/Datenbank.db");
 			st = con.createStatement();
@@ -34,7 +36,7 @@ public class DatenbankAnbindung {
 
 		Bogen bog =  new Bogen();
 		bog.setFrage1(result.getString("BoFrage1"));
-		bog.setId(result.getInt("BoID"));
+		bog.setId(result.getString("BoID"));
 		return bog;
 	}
 	

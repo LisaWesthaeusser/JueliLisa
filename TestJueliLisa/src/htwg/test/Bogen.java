@@ -2,11 +2,11 @@ package htwg.test;
 
 public class Bogen {
 		
-		private int id;
+		private String id;
 		private String name;
 		private String frage1;
 
-		public int getId() {
+		public String getId() {
 			return id;
 		}
 
@@ -18,7 +18,7 @@ public class Bogen {
 			return frage1;
 		}
 
-		public void setId(int id) {
+		public void setId(String id) {
 			this.id = id;
 		}
 
